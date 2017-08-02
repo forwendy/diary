@@ -33,6 +33,9 @@
 				position: absolute;
 				top: 0;bottom: 0;left: 0;right: 0;
 				margin: auto;
+
+				transition: all .5s ease-in-out;
+	      -webkit-transition: all .5s ease-in-out;
 			}
 			.station-pic{
 				width: 231px;
@@ -52,43 +55,129 @@
 	<body>
 
 <div class="station-view" id="stationView">
+	<div class="station" style="right:120px; transform: scale(0.9,0.9); z-index: 1; opacity:0;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站0</h3>
+	</div>
 	<div class="station" style="right:120px; transform: scale(0.9,0.9); z-index: 1; opacity:0.6;">
 		<div class="station-pic"></div>
-		<h3 class="station-txt">创意天地北站</h3>
+		<h3 class="station-txt">创意天地北站1</h3>
 	</div>
 	<div class="station" style="right:60px; transform: scale(0.95,0.95); z-index: 2;opacity:0.8;">
 		<div class="station-pic"></div>
-		<h3 class="station-txt">创意天地北站</h3>
+		<h3 class="station-txt">创意天地北站2</h3>
 	</div>
 	<div class="station" style="z-index: 3;">
 		<div class="station-pic"></div>
-		<h3 class="station-txt">创意天地</h3>
+		<h3 class="station-txt">创意天地3</h3>
 	</div>
 	<div class="station" style="left:60px; transform: scale(0.95,0.95); z-index: 2;opacity:0.8;">
 		<div class="station-pic"></div>
-		<h3 class="station-txt">创意天地北站</h3>
+		<h3 class="station-txt">创意天地北站4</h3>
 	</div>
 	<div class="station" style="left:120px; transform: scale(0.9,0.9); z-index: 1; opacity:0.6;">
 		<div class="station-pic"></div>
-		<h3 class="station-txt">创意天地北站</h3>
+		<h3 class="station-txt">创意天地北站5</h3>
+	</div>
+	<div class="station" style="left:120px; transform: scale(0.9,0.9); z-index: 1; opacity:0;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站6</h3>
+	</div>
+	<div class="station" style="left:120px; transform: scale(0.9,0.9); z-index: 1; opacity:0;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站7</h3>
+	</div>
+	<div class="station" style="left:120px; transform: scale(0.9,0.9); z-index: 1; opacity:0;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站8</h3>
 	</div>
 </div>
-		
-<script src="zepto.js"></script>
+
+<span id="prev">向左滑</span>
+<span id="next">向右滑</span>
+<script src="zepto.min.js"></script>
 <script src="zepto.touch.js"></script>
 <script>
+	var len = $('#stationView').find('.station').length;
 
-$('#stationView .station').swipe(function(e){
-	alert(0);
-	
-	$(this).css({
+$('#prev').click(function(e){
+
+	$('#stationView').find('.station').eq(1).css({
+		'opacity': '0'
+	});
+	$('#stationView').find('.station').eq(2).css({
+		'left': '0',
+		'right': '120px',
+		'transform': 'scale(0.9,0.9)',
+		'z-index': '1',
+		'opacity': '0.6'
+	});
+	$('#stationView').find('.station').eq(3).css({
+		'left': '0',
 		'right': '60px',
 		'transform': 'scale(0.95,0.95)',
 		'z-index': '2',
 		'opacity': '0.8'
 	});
-	$(this).next('.station').attr('style','z-index: 2');
-})
+	$('#stationView').find('.station').eq(4).attr('style','z-index: 3');
+	$('#stationView').find('.station').eq(5).css({
+		'right': '0',
+		'left': '60px',
+		'transform': 'scale(0.95,0.95)',
+		'z-index': '2',
+		'opacity': '0.8'
+	});
+	$('#stationView').find('.station').eq(6).css({
+		'right': '0',
+		'left': '120px',
+		'transform': 'scale(0.9,0.9)',
+		'z-index': '1',
+		'opacity': '0.6'
+	});
+
+	setTimeout(function(){
+		$('#stationView').find('.station').eq(0).insertAfter($('#stationView').find('.station').eq(len-1));
+	}, 500);
+});
+$('#next').click(function(e){
+
+	$('#stationView').find('.station').eq(0).css({
+		'left': '0',
+		'right': '120px',
+		'transform': 'scale(0.9,0.9)',
+		'z-index': '1',
+		'opacity': '0.6'
+	});
+	$('#stationView').find('.station').eq(1).css({
+		'left': '0',
+		'right': '60px',
+		'transform': 'scale(0.95,0.95)',
+		'z-index': '2',
+		'opacity': '0.8'
+	});
+	$('#stationView').find('.station').eq(2).attr('style','z-index: 3');
+	$('#stationView').find('.station').eq(3).css({
+		'right': '0',
+		'left': '60px',
+		'transform': 'scale(0.95,0.95)',
+		'z-index': '2',
+		'opacity': '0.8'
+	});
+	$('#stationView').find('.station').eq(4).css({
+		'right': '0',
+		'left': '120px',
+		'transform': 'scale(0.9,0.9)',
+		'z-index': '1',
+		'opacity': '0.6'
+	});
+	$('#stationView').find('.station').eq(5).css({
+		'opacity': '0'
+	});
+
+	setTimeout(function(){
+		$('#stationView').find('.station').eq(len-1).insertBefore($('#stationView').find('.station').eq(0));
+	}, 500);
+});
 </script>
 	</body>
 </html>
