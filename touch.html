@@ -100,8 +100,8 @@
 <script>
 	var len = $('#stationView').find('.station').length;
 
-$('#prev').tap(function(e){
-
+$('#stationView .station').swipeLeft(function(e){
+	console.log(0)
 	$('#stationView').find('.station').eq(1).css({
 		'opacity': '0'
 	});
