@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+		<!--iphone-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<!--iphone-->
+		<title>title</title>
+		<style>.delete { display: none; }</style>
+	</head>
+	<body>
+
+<ul id="items">
+  <li>List item 1 <span class="delete">DELETE</span></li>
+  <li>List item 2 <span class="delete">DELETE</span></li>
+</ul>
+
+<script src="zepto.min.js"></script>
+<script src="zepto.touch.js"></script>
+<script>
+// show delete buttons on swipe
+$('#items li').swipe(function(){
+  $('.delete').hide();
+  $('.delete', this).show();
+});
+
+// delete row on tapping delete button
+$('.delete').tap(function(){
+  $(this).parent('li').remove();
+});
+</script>
+	</body>
+</html>
