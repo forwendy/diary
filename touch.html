@@ -95,7 +95,7 @@
 
 <span id="prev">向左滑</span>
 <span id="next">向右滑</span>
-<script src="zepto.min.js"></script>
+<script src="zepto.js"></script>
 <script src="zepto.touch.js"></script>
 <script>
 	var len = $('#stationView').find('.station').length;
@@ -139,7 +139,7 @@ $('#stationView .station').swipeLeft(function(e){
 		$('#stationView').find('.station').eq(0).insertAfter($('#stationView').find('.station').eq(len-1));
 	}, 500);
 });
-$('#next').tap(function(e){
+$('#stationView .station').swipeRight(function(e){
 
 	$('#stationView').find('.station').eq(0).css({
 		'left': '0',
