@@ -51,15 +51,15 @@
 	<body>
 
 <div class="station-view" id="stationView">
-	<div class="station" style="right:60px; transform: scale(1.1,1.1); z-index: 1; opacity:0;">
+	<div class="station" style="right:60px; transform: scale(1.1,0.9); z-index: 1; opacity:0;">
 		<div class="station-pic"></div>
 		<h3 class="station-txt">创意天地北站</h3>
 	</div>
-	<div class="station" style="right:60px; transform: scale(1.1,1.1); z-index: 1; opacity:0.6;">
+	<div class="station" style="right:60px; transform: scale(1.1,0.9); z-index: 1; opacity:0.6;">
 		<div class="station-pic"></div>
 		<h3 class="station-txt">创意天地北站</h3>
 	</div>
-	<div class="station" style="right:30px; transform: scale(1.05,1.05); z-index: 2;opacity:0.8;">
+	<div class="station" style="right:30px; transform: scale(1.05,0.95); z-index: 2;opacity:0.8;">
 		<div class="station-pic"></div>
 		<h3 class="station-txt">创意天地北站</h3>
 	</div>
@@ -67,11 +67,11 @@
 		<div class="station-pic"></div>
 		<h3 class="station-txt">创意天地北站</h3>
 	</div>
-	<div class="station" style="left:30px; transform: scale(1.05,1.05); z-index: 2;opacity:0.8;">
+	<div class="station" style="left:30px; transform: scale(1.05,0.95); z-index: 2;opacity:0.8;">
 		<div class="station-pic"></div>
 		<h3 class="station-txt">创意天地北站</h3>
 	</div>
-	<div class="station" style="left:60px; transform: scale(1.1,1.1); z-index: 1; opacity:0.6;">
+	<div class="station" style="left:60px; transform: scale(1.1,0.9); z-index: 1; opacity:0.6;">
 		<div class="station-pic"></div>
 		<h3 class="station-txt">创意天地北站</h3>
 	</div>
@@ -86,7 +86,7 @@
 <script>
 
 // show delete buttons on swipe
-$('#stationView').swipeLeft(function(){
+$('#stationView').find('station').swipeLeft(function(){
 	alert(0)
 });
 
