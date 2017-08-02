@@ -8,23 +8,86 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no, email=no">
 		<!--iphone-->
-		<title>title</title>
-		<style>.delete { display: none; }</style>
+		<title>移动端卡片式轮播</title>
+		<style>
+			body{
+ 				box-sizing: border-box;
+        -moz-box-sizing: border-box;/* Firefox */
+        -webkit-box-sizing: border-box;/* Safari */
+        font-family:Helvetica;
+				margin: 0;
+			}
+			.station-view{
+				padding: 25px 15px;
+				height: 283px;
+				position: relative;
+			}
+			.station{
+				width: 230px;
+				height: 192px;
+				padding: 15px 10px;
+				box-shadow: 0 0 20px 10px rgba(0,0,0,.05);
+				background: #fff;
+
+				position: absolute;
+				top: 0;bottom: 0;left: 0;right: 0;
+				margin: auto;
+			}
+			.station-pic{
+				width: 231px;
+				height: 170px;
+				background: #ccc;
+				margin-bottom: 5px;
+			}
+			.station-txt{
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				font-weight: 500;
+				margin: 0;
+			}
+		</style>
 	</head>
 	<body>
 
-<ul id="items">
-  <li>List item 1 <span class="delete">DELETE</span></li>
-  <li>List item 2 <span class="delete">DELETE</span></li>
-</ul>
+<div class="station-view" id="stationView">
+	<div class="station" style="right:60px; transform: scale(1.1,1.1); z-index: 1; opacity:0;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站</h3>
+	</div>
+	<div class="station" style="right:60px; transform: scale(1.1,1.1); z-index: 1; opacity:0.6;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站</h3>
+	</div>
+	<div class="station" style="right:30px; transform: scale(1.05,1.05); z-index: 2;opacity:0.8;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站</h3>
+	</div>
+	<div class="station" style="z-index: 3;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站</h3>
+	</div>
+	<div class="station" style="left:30px; transform: scale(1.05,1.05); z-index: 2;opacity:0.8;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站</h3>
+	</div>
+	<div class="station" style="left:60px; transform: scale(1.1,1.1); z-index: 1; opacity:0.6;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站</h3>
+	</div>
+	<div class="station" style="left:60px; transform: scale(1.1,1.1); z-index: 1; opacity:0;">
+		<div class="station-pic"></div>
+		<h3 class="station-txt">创意天地北站</h3>
+	</div>
+</div>
 
-<script src="zepto.js"></script>
+<script src="zepto.min.js"></script>
 <script src="zepto.touch.js"></script>
 <script>
+
 // show delete buttons on swipe
-$('#items li').swipe(function(){
-  $('.delete').hide();
-  $('.delete', this).show();
+$('#stationView').swipeLeft(function(){
+	alert(0)
 });
 
 // delete row on tapping delete button
