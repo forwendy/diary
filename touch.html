@@ -100,7 +100,7 @@
 <script>
 	var len = $('#stationView').find('.station').length;
 
-$('#prev').click(function(e){
+$('#prev').tap(function(e){
 
 	$('#stationView').find('.station').eq(1).css({
 		'opacity': '0'
@@ -139,7 +139,7 @@ $('#prev').click(function(e){
 		$('#stationView').find('.station').eq(0).insertAfter($('#stationView').find('.station').eq(len-1));
 	}, 500);
 });
-$('#next').click(function(e){
+$('#next').tap(function(e){
 
 	$('#stationView').find('.station').eq(0).css({
 		'left': '0',
