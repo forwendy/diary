@@ -73,31 +73,19 @@
 		<h3 class="station-txt">创意天地北站</h3>
 	</div>
 </div>
-<style>.delete { display: none; }</style>
-
-<ul id="items">
-  <li>List item 1 <span class="delete">DELETE</span></li>
-  <li>List item 2 <span class="delete">DELETE</span></li>
-</ul>
-
-<script>
-// show delete buttons on swipe
-$('#items li').swipe(function(){
-  $('.delete').hide()
-  $('.delete', this).show()
-})
-
-// delete row on tapping delete button
-$('.delete').tap(function(){
-  $(this).parent('li').remove()
-})
-</script>
+		
 <script src="zepto.js"></script>
 <script src="zepto.touch.js"></script>
 <script>
 
-$('#stationView .station').swipe(function(e){
-	alert(0);
+$('#stationView .station').swipeLeft(function(e){
+	$(this).css({
+		right:60px,
+		transform: scale(0.95,0.95),
+		z-index: 2,
+		opacity:0.8;
+	});
+	$(this).next('.station').attr('style','z-index: 2');
 })
 </script>
 	</body>
