@@ -149,17 +149,15 @@ document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
       var img = new Image;
       img.src = strDataURI;
     	card.innerHTML = '';
-      card.appendChild(img);
-      localStorage.setItem('imageData', strDataURI);
+        card.appendChild(img);
+        var save = document.getElementById('save');
+        var triggerEvent = "touchstart"; //指定下载方式
+        save.addEventListener(triggerEvent,function(){
+           alert(strDataURI);
+           saveAs(strDataURI);
+        },false);
     });
 
-    var save = document.getElementById('save');
-var triggerEvent = "touchstart"; //指定下载方式
-save.addEventListener(triggerEvent,function(){
-    var url = localStorage.getItem('imageData');
-    alert(url);
-    saveAs(url);
-},false);
 
 function saveAs(Url){
     var blob=new Blob([''], {type:'application/octet-stream'});
