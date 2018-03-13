@@ -157,6 +157,7 @@ document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
 var triggerEvent = "touchstart"; //指定下载方式
 save.addEventListener(triggerEvent,function(){
     var url = localStorage.getItem('imageData');
+    alert(url);
     saveAs(url);
 },false);
 
