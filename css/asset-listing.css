@@ -1,0 +1,75 @@
+#wrapper{
+  background: #fff;
+  height: 0.84rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#scroller{
+  position: absolute;
+  top: 0;
+  width: 11.52rem;
+}
+#scroller ul{
+  overflow: hidden;
+  padding-left: 0;
+  margin: 0;
+}
+#scroller ul li{
+  display: block;
+  float: left;
+  text-align: center;
+  width: 1.32rem;
+  height: 100%;
+  line-height: 0.8rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  color: #666;
+}
+#scroller ul li.active{
+  color: #000;
+  border-bottom: 0.04rem solid #00ce9b;
+}
+.list{
+  margin-top: 1rem;
+  padding: 0.3rem;
+}
+.list-item{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: left;
+  padding: 0.28rem;
+  margin: 0.3rem 0;
+}
+.list-item .fl{
+  float: left;
+  width: 1.55rem;
+  height: 1.55rem;
+  overflow: hidden;
+  margin-right: 0.28rem;
+}
+.list-item .fl img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.list-item .fr{
+  width: 4.45rem;
+}
+.list-item .fr h2{
+  font-size: 0.9375em;
+  margin: 0 0 0.1rem;
+  line-height: 1;
+  font-weight: 500;
+  color: #000;
+}
+.list-item .fr p{
+  font-size: 0.8125em;
+  margin: 0;
+  line-height: 1.5;
+  color: #000;
+}

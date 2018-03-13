@@ -3,7 +3,8 @@
 
 > **关键词：** [html2canvas](http://html2canvas.hertzen.com/)、[HTMLCanvasElement](https://developer.mozilla.org/zh-CN/docs/Web/API/、HTMLCanvasElement)、[Data URLs](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/data_URIs)
 
-> **参考文章：** [一次 H5 「保存页面为图片」 的踩坑之旅](https://juejin.im/post/5a17c5e26fb9a04527254689#heading-0)
+> **参考文章：** [一次 H5 「保存页面为图片」 的踩坑之旅](https://juejin.im/post/5a17c5e26fb9a04527254689#heading-0)、
+> [如何用 JavaScript 下载文件](https://mp.weixin.qq.com/s/U_LuC2Nyv4ZcNpX0tHDP3g)
 
 ## 解决方案
 
@@ -43,6 +44,9 @@ html2canvas方法的第一个参数是进行转化的DOM元素，第二个参数
 
 由于是移动端的项目，存在视图缩放的问题。scale参数的默认值是window.devicePixelRatio，根据设备的不同会发生改版。但是DOM界面是按2倍的缩放的，所以要固定scale为2才能够正常的转化为canvas。
 
+### html2canvas处理图片跨域问题
+配置参数 useCORS = true
+
 ## canvas to image
 
 `canvas.toDataURL(type, encoderOptions);`
@@ -65,7 +69,12 @@ html2canvas方法的第一个参数是进行转化的DOM元素，第二个参数
 
 `<a href="下载的URL" download="下载的文件名"> `
 
+这里是图片下载，而不是保存到相册。
+
+### 
+
 ### 兼容性问题
 
 #### 微信环境
+
 

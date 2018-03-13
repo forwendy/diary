@@ -1,0 +1,82 @@
+body{background: #EBF0F2;}
+.card{
+  width: 6.2rem;
+  margin: 0.5rem auto 1rem;
+  background: #fff;
+  border-radius: 5px;
+}
+.card h1{
+  font-size: 1.0625em;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  padding: 0.7rem 0 0.33rem;
+  position: relative;
+}
+.card h1:before,
+.card h1:after{
+  content: "";
+  display: block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background: #EBF0F2;
+  position: absolute;
+  bottom: -0.15rem;
+}
+.card h1:before{
+  left: -0.15rem;
+}
+.card h1:after{
+  right: -0.15rem;
+}
+.card-info{
+  padding: 0.3rem 0.4rem 0.85rem;
+}
+.card-info p{
+  color: #000;
+}
+.icon-company,
+.icon-contract,
+.icon-station,
+.icon-date,
+.icon-space{
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.44rem;
+  height: 0.44rem;
+  margin-right: 0.2rem;
+}
+.icon-company{
+  background: url(../imgs/company.png) no-repeat;
+  background-size: 0.44rem;
+}
+.icon-contract{
+  background: url(../imgs/contract_status.png) no-repeat;
+  background-size: 0.44rem;
+}
+.icon-station{
+  background: url(../imgs/location.png) no-repeat;
+  background-size: 0.44rem;
+}
+.icon-date{
+  background: url(../imgs/date.png) no-repeat;
+  background-size: 0.44rem;
+}
+.icon-space{
+  background: url(../imgs/room.png) no-repeat;
+  background-size: 0.44rem;
+}
+.enter{
+  position: fixed;
+  left: 0;right: 0;bottom: 0;
+  background: #00ce9b;
+  color: #fff;
+  text-align: center;
+  line-height: 0.88rem;
+  font-size: 0.9375em;
+  text-decoration: none;
+}
+.enter.disabled{
+  background: #ccc;
+}

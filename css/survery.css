@@ -1,0 +1,80 @@
+#welcome{
+  text-align: center;
+}
+#welcome h1{
+  font-size: 1.375em;
+  font-weight: 500;
+  margin-top: 1.11rem;
+  margin-bottom: 1.59rem;
+}
+#welcome img{
+  width: 3.94rem;
+  height: 4rem;
+  margin-bottom: 2.66rem;
+}
+#welcome a{
+  font-size: 0.9375em;
+  color: #27a7eb;
+  text-decoration: none;
+}
+.banner{
+    width: 7.5rem;
+    height: 3.13rem;
+    background: url(../imgs/evaluation_img@2x.png) no-repeat;
+    background-size: 100%;
+}
+.question{
+    padding: 0 0.3rem;
+    margin-bottom: 0.9rem;
+}
+.question h1{
+    font-size: 1em;
+    font-weight: 500;
+    color: #000;
+    margin-top: 0.57rem;
+    margin-bottom: 0.3rem;
+}
+.question label{
+    display: block;
+    font-size: 0.875em;
+    color: #999;
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+.question label input[type="radio"]{
+    width: 1px;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+.question label input[type="radio"] + span:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.28rem;
+    height: 0.28rem;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    border: 0.01rem solid #999;
+    background: #fff;
+}
+.question label input[type="radio"]:checked  + span:before{
+    border: none;
+    width: 0.3rem;
+    height: 0.3rem;
+    background: url(../imgs/evaluation_icn_sel@2x.png);
+    background-size: 0.3rem;
+}
+.sumbit{
+    border: none;
+    display: block;
+    font-size: 0.9375em;
+    margin: 1.3rem 0.3rem 1rem;
+    width: 6.9rem;
+    line-height: 0.88rem;
+    border-radius: 4px;
+    background: #ccc;
+    color: #fff;
+}
+.sumbit.active{
+    background: #00ce9b;
+}
