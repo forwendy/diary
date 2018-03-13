@@ -134,7 +134,7 @@ document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
 	      </div>
 	      <p>OVU创客星入驻识别码</p>
 	    </div>
-	    <a class="button" id="save" href="">保存到相册</a>
+	    <a class="button" id="save">保存到相册</a>
 	    <p class="notes">1、本二维码作为入驻唯一标识，入驻当天凭码办理入驻<br>2、为保障您的安全，请勿将此二维码泄露给他人<br>3、入驻当天请携带贵公司营业执照，法人身份证，经办
 人身份证（如果是经办人办理入驻）。</p>
 	  </div>
@@ -166,10 +166,9 @@ function saveAs(Url){
     var a = document.createElement('a');
     a.href = Url;
     a.download = Url.replace(/(.*\/)*([^.]+.*)/ig,"$2").split("?")[0];
-    /*var e = document.createEvent('MouseEvents');
+    var e = document.createEvent('MouseEvents');
     e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-    a.dispatchEvent(e);*/
-    a.click();
+    a.dispatchEvent(e);
     window.URL.revokeObjectURL(url);
 }
 
