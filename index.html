@@ -160,9 +160,10 @@ document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
 
 
 function saveAs(Url){
-    // var blob=new Blob([''], {type:'application/octet-stream'});
+    var blob=new Blob([''], {type:'application/octet-stream'});
     var a = document.createElement('a');
     var url = window.URL.createObjectURL(blob);
+	alert( url);
     a.href = url;
     a.download = 'QRcode.png';
     a.click();
