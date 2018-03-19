@@ -62,7 +62,7 @@ html2canvas方法的第一个参数是进行转化的DOM元素，第二个参数
 这是由于图片是跨域的，导致canvas画布无法提交数据。[参考文章](https://www.jianshu.com/p/6fe06667b748)
 
 于是，我用Node.js的express框架搭建了一个临时的web测试服务器。
-在服务器端运行时canvas转化成了image，用<img>标签替代了<canvas>。
+在服务器端运行时canvas转化成了image，用`<img>`标签替代了`<canvas>`。
 
 ## 保存到本地相册
 运用的是HTML5新增<a>的[[download]](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)属性。
@@ -74,5 +74,3 @@ html2canvas方法的第一个参数是进行转化的DOM元素，第二个参数
 ### 兼容性问题
 
 #### 微信环境
-
-
